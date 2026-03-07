@@ -1,11 +1,58 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <style>
+    body {
+      font-family: Arial;
+      text-align: center;
+      
+    }
+    input, button {
+      padding: 8px;
+      margin: 5px;
+    }
+    </style>
 </head>
 <body>
-  
+    
+    <nav>
+        <a href="positive.html">Positive No.</a>
+        <a href="Voting.html">Voting</a>
+        <a href="percentage.html">Percentage</a>
+        <a href="calculator.html">Calculator</a>
+        <a href="for.html">For Loop</a>
+        <a href="while.html">While Loop</a>
+        <a href="dowhile.html">Do_While Loop</a>
+        <a href="forin.html">For_In Loop</a>
+    </nav>
+
+    <div>
+         <h2>Enter a Number</h2>
+
+        <input type="number" id="numInput" placeholder="Enter number">
+        <button onclick="checkNumber()">Check</button>
+
+        <p id="result"></p>       
+    </div>
+
+    <script>
+    function checkNumber() {
+      let num = Number(document.getElementById("numInput").value);
+
+      if (num > 0) {
+        document.getElementById("result").innerText = "Positive number";
+      } else if (num < 0) {
+        document.getElementById("result").innerText = "Negative number";
+      } else {
+        document.getElementById("result").innerText = "Zero";
+      }
+    }
+  </script>
+
 </body>
 </html>
