@@ -44,3 +44,15 @@ It is designed to practice **conditional statements and loops** in JavaScript.
 - Easy navigation using a navbar
 - Beginner-friendly examples
 
+---
+##  Purpose
+
+This project was created for **learning JavaScript fundamentals**, especially:
+- Conditional statements (`if`, `else`)
+- Loops (`for`, `while`, `do...while`, `for...in`)
+- Basic DOM manipulation
+
+##  Author
+
+**Krish Ghori**
+
