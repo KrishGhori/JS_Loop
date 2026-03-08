@@ -4,8 +4,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    
 </head>
 <body>
     
+    <nav>
+        <a href="positive.html">Positive No.</a>
+        <a href="Voting.html">Voting</a>
+        <a href="percentage.html">Percentage</a>
+        <a href="calculator.html">Calculator</a>
+        <a href="for.html">For Loop</a>
+        <a href="while.html">While Loop</a>
+        <a href="dowhile.html">Do_While Loop</a>
+        <a href="forin.html">For_In Loop</a>
+    </nav>
+
+    <div>
+         <h2>Calculator Using Switch Case</h2>
+
+        <input type="number" id="num1" placeholder="Enter First Number">
+        <input type="number" id="num2" placeholder="Enter Second Number">
+        <br>
+        <input type="number" id="choice" placeholder="Enter Choice (1-5)">
+        <br>
+        <p>
+            1 - Addition <br>
+            2 - Subtraction <br>
+            3 - Multiplication <br>
+            4 - Division <br>
+            5 - Modulus
+</p>
+        <button onclick="calculate()">Calculate</button>
+
+        <p id="result"></p>
+
+    </div>
+
+     <script>
+    function calculate() {
+      let a = Number(document.getElementById("num1").value);
+      let b = Number(document.getElementById("num2").value);
+      let choice = Number(document.getElementById("choice").value);
+      let result;
+
+      switch (choice) {
+        case 1:
+          result = a + b;
+          break;
+
+        case 2:
+          result = a - b;
+          break;
+
+        case 3:
+          result = a * b;
+          break;
+
+        case 4:
+          if (b === 0) {
+            result = "Cannot divide by zero";
+          } else {
+            result = a / b;
+          }
+          break;
+
+        case 5:
+          result = a % b;
+          break;
+
+        default:
+          result = "Invalid Choice";
+      }
+
+      document.getElementById("result").innerText = "Result: " + result;
+    }
+  </script>
+
 </body>
 </html>
