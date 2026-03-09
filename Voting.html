@@ -4,8 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <style>
+    body {
+      font-family: Arial;
+      text-align: center;
+      
+    }
+    input, button {
+      padding: 8px;
+      margin: 5px;
+    }
+    </style>
 </head>
 <body>
     
+    <nav>
+        <a href="positive.html">Positive No.</a>
+        <a href="Voting.html">Voting</a>
+        <a href="percentage.html">Percentage</a>
+        <a href="calculator.html">Calculator</a>
+        <a href="for.html">For Loop</a>
+        <a href="while.html">While Loop</a>
+        <a href="dowhile.html">Do_While Loop</a>
+        <a href="forin.html">For_In Loop</a>
+    </nav>
+
+    <div>
+         <h2>Check Voting Eligibility</h2>
+
+  <input type="number" id="ageInput" placeholder="Enter your age">
+  <button onclick="checkAge()">Submit</button>
+
+  <p id="result"></p>
+    </div>
+
+     <script>
+    function checkAge() {
+      let age = document.getElementById("ageInput").value;
+
+      if (age >= 18) {
+        document.getElementById("result").innerText = "You are eligible to vote.";
+      } else {
+        document.getElementById("result").innerText = "You are not eligible to vote.";
+      }
+    }
+  </script>
 </body>
 </html>
