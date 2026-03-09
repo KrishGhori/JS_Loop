@@ -1,54 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="main.css">
-    <style>
-    body {
-      font-family: Arial;
-      text-align: center;
-      
-    }
-    input, button {
-      padding: 8px;
-      margin: 5px;
-    }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Voting Eligibility</title>
+
+<link rel="stylesheet" href="main.css">
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+input,button{
+    padding:8px;
+    margin:5px;
+}
+
+.container{
+    margin-top:40px;
+}
+</style>
 </head>
+
 <body>
-    
-    <nav>
-        <a href="positive.html">Positive No.</a>
-        <a href="Voting.html">Voting</a>
-        <a href="percentage.html">Percentage</a>
-        <a href="calculator.html">Calculator</a>
-        <a href="for.html">For Loop</a>
-        <a href="while.html">While Loop</a>
-        <a href="dowhile.html">Do_While Loop</a>
-        <a href="forin.html">For_In Loop</a>
-    </nav>
 
-    <div>
-         <h2>Check Voting Eligibility</h2>
+<nav>
+<a href="positive.html">Positive No.</a>
+<a href="Voting.html">Voting</a>
+<a href="percentage.html">Percentage</a>
+<a href="calculator.html">Calculator</a>
+<a href="for.html">For Loop</a>
+<a href="while.html">While Loop</a>
+<a href="dowhile.html">Do While Loop</a>
+<a href="forin.html">For In Loop</a>
+</nav>
 
-  <input type="number" id="ageInput" placeholder="Enter your age">
-  <button onclick="checkAge()">Submit</button>
+<div class="container">
 
-  <p id="result"></p>
-    </div>
+<h2>Check Voting Eligibility</h2>
 
-     <script>
-    function checkAge() {
-      let age = document.getElementById("ageInput").value;
+<input type="number" id="ageInput" placeholder="Enter your age">
 
-      if (age >= 18) {
-        document.getElementById("result").innerText = "You are eligible to vote.";
-      } else {
-        document.getElementById("result").innerText = "You are not eligible to vote.";
-      }
-    }
-  </script>
+<button onclick="checkAge()">Submit</button>
+
+<p id="result"></p>
+
+</div>
+
+<script>
+function checkAge(){
+
+let age = Number(document.getElementById("ageInput").value);
+
+if(age === 0){
+document.getElementById("result").innerText = "Please enter your age.";
+}
+else if(age >= 18){
+document.getElementById("result").innerText = "You are eligible to vote.";
+}
+else{
+document.getElementById("result").innerText = "You are not eligible to vote.";
+}
+
+}
+</script>
+
 </body>
 </html>
