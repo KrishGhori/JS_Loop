@@ -40,7 +40,41 @@
         <p id="result"></p>
     </div>
 
-   
+     <script>
+    function findGrade() {
+      let per = Number(document.getElementById("percentage").value);
+      let grade;
+        // if(per ){
+
+        // }
+       if (per >= 90 && per <= 100) {
+        grade = "O";
+      } 
+      else if (per>= 80 && per<=90) {
+        grade = "A+";
+      } 
+      else if (per >= 70 && per<= 80) {
+        grade = "A";
+      } 
+      else if (per >= 60 && per<= 70) {
+        grade = "B+";
+      } 
+      else if (per >= 50 && per<= 60) {
+        grade = "B";
+      } 
+      else if (per >= 40 && per<= 50) {
+        grade = "C";
+      } 
+      else if (per >= 0 && per<= 40) {
+        grade = "F";
+      } 
+      else {
+        grade = "Invalid Percentage";
+      }
+
+      document.getElementById("result").innerText = "Grade: " + grade;
+    }
+  </script>
 
      
 </body>
