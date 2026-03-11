@@ -2,64 +2,69 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loop Statement</title>
-    <link rel="stylesheet" href="main.css">
-    <style>
-    body {
-      font-family: Arial;
-      text-align: center;
-    }
-    .pre{
-        height: 50px;
-        font-size: xx-large;
-        margin-top: 80px;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Loop Statement</title>
 
-  </style>
+<link rel="stylesheet" href="main.css">
+
+<style>
+body{
+    font-family: Arial;
+    text-align: center;
+}
+
+pre{
+    font-size: 22px;
+    margin-top: 50px;
+}
+</style>
+
 </head>
 
 <body>
 
-     <nav>
-        <a href="positive.html">Positive No.</a>
-        <a href="Voting.html">Voting</a>
-        <a href="percentage.html">Percentage</a>
-        <a href="calculator.html">Calculator</a>
-        <a href="for.html">For Loop</a>
-        <a href="while.html">While Loop</a>
-        <a href="dowhile.html">Do_While Loop</a>
-        <a href="forin.html">For_In Loop</a>
-    </nav>
+<nav>
+<a href="positive.html">Positive No.</a>
+<a href="Voting.html">Voting</a>
+<a href="percentage.html">Percentage</a>
+<a href="calculator.html">Calculator</a>
+<a href="for.html">For Loop</a>
+<a href="while.html">While Loop</a>
+<a href="dowhile.html">Do While Loop</a>
+<a href="forin.html">For In Loop</a>
+</nav>
 
-    <div class="tabcontent">
+<div>
 
-        <h3>Number Pyramid using For Loop</h3>
+<h3>Number Pyramid using For Loop</h3>
 
-        <pre id="output"></pre>
+<pre id="output"></pre>
 
-        <script>
+</div>
 
-            var n = 5;
-            var result = "";
+<script>
 
-            for (var i = 1; i <= n; i++) {
-                for (var s = 1; s <= n - i; s++) {
-                    result += " ";
-                }
+let n = 5;
+let result = "";
 
-                for (var j = 1; j <= i; j++) {
-                    result += j + " ";
-                }
+for(let i = 1; i <= n; i++){
 
-                result += "\n";
-            }
+    for(let s = 1; s <= n - i; s++){
+        result += " ";
+    }
 
-            document.getElementById("output").innerHTML = result;
+    for(let j = 1; j <= i; j++){
+        result += j + " ";
+    }
 
-        </script>
-    </div>
+    result += "\n";
+}
+
+document.getElementById("output").textContent = result;
+
+</script>
+
 </body>
 
 </html>
