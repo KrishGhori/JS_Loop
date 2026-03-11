@@ -39,7 +39,26 @@
 
         <pre id="output"></pre>
 
-        
+        <script>
+
+            var n = 5;
+            var result = "";
+
+            for (var i = 1; i <= n; i++) {
+                for (var s = 1; s <= n - i; s++) {
+                    result += " ";
+                }
+
+                for (var j = 1; j <= i; j++) {
+                    result += j + " ";
+                }
+
+                result += "\n";
+            }
+
+            document.getElementById("output").innerHTML = result;
+
+        </script>
     </div>
 </body>
 
