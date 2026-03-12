@@ -41,5 +41,34 @@
 
 
  </div>
+
+    <script>
+function checkPrime() {
+  let num = Number(document.getElementById("number").value);
+
+  if (num <= 1) {
+    document.getElementById("result").innerText = "Not a Prime Number";
+    return;
+  }
+
+  let i = 2;
+  let isPrime = true;
+
+  while (i <= Math.sqrt(num)) {
+    if (num % i === 0) {
+      isPrime = false;
+      break;
+    }
+    i++;
+  }
+
+  if (isPrime) {
+    document.getElementById("result").innerText = "Prime Number";
+  } else {
+    document.getElementById("result").innerText = "Not a Prime Number";
+  }
+}
+</script>
+
 </body>
 </html>
