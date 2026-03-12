@@ -1,73 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="main.css">
-    <style>
-    body {
-      font-family: Arial;
-      text-align: center;
-    }
-    input, button {
-      padding: 8px;
-      margin: 5px;
-    }
-  </style>
-</head>
-<body>
-    
-    <nav>
-        <a href="positive.html">Positive No.</a>
-        <a href="Voting.html">Voting</a>
-        <a href="percentage.html">Percentage</a>
-        <a href="calculator.html">Calculator</a>
-        <a href="for.html">For Loop</a>
-        <a href="while.html">While Loop</a>
-        <a href="dowhile.html">Do_While Loop</a>
-        <a href="forin.html">For_In Loop</a>
-    </nav>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prime Number Checker</title>
 
-    <div>
-         
+<link rel="stylesheet" href="main.css">
+
+<style>
+body{
+    font-family: Arial;
+    text-align: center;
+}
+
+input,button{
+    padding:8px;
+    margin:5px;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<a href="positive.html">Positive No.</a>
+<a href="Voting.html">Voting</a>
+<a href="percentage.html">Percentage</a>
+<a href="calculator.html">Calculator</a>
+<a href="for.html">For Loop</a>
+<a href="while.html">While Loop</a>
+<a href="dowhile.html">Do While Loop</a>
+<a href="forin.html">For In Loop</a>
+</nav>
+
+<div>
+
 <h2>Check Prime Number</h2>
 
 <input type="number" id="number" placeholder="Enter a number">
+
 <br><br>
+
 <button onclick="checkPrime()">Check</button>
 
 <p id="result"></p>
 
+</div>
 
- </div>
+<script>
 
-    <script>
-function checkPrime() {
-  let num = Number(document.getElementById("number").value);
+function checkPrime(){
 
-  if (num <= 1) {
-    document.getElementById("result").innerText = "Not a Prime Number";
-    return;
-  }
+let num = Number(document.getElementById("number").value);
 
-  let i = 2;
-  let isPrime = true;
-
-  while (i <= Math.sqrt(num)) {
-    if (num % i === 0) {
-      isPrime = false;
-      break;
-    }
-    i++;
-  }
-
-  if (isPrime) {
-    document.getElementById("result").innerText = "Prime Number";
-  } else {
-    document.getElementById("result").innerText = "Not a Prime Number";
-  }
+if(num <= 1){
+document.getElementById("result").textContent = "Not a Prime Number";
+return;
 }
+
+let i = 2;
+let isPrime = true;
+
+while(i <= Math.sqrt(num)){
+
+if(num % i === 0){
+isPrime = false;
+break;
+}
+
+i++;
+
+}
+
+document.getElementById("result").textContent =
+isPrime ? "Prime Number" : "Not a Prime Number";
+
+}
+
 </script>
 
 </body>
