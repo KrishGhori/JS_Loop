@@ -1,65 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="main.css">
-    <style>
-    body {
-      font-family: Arial;
-      text-align: center;
-    }
-    .pre{
-        height: 50px;
-        font-size: xx-large;
-        margin-top: 80px;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guess the Number</title>
 
-  </style>
-</head>
-<body>
-    
-    <nav>
-        <a href="positive.html">Positive No.</a>
-        <a href="Voting.html">Voting</a>
-        <a href="percentage.html">Percentage</a>
-        <a href="calculator.html">Calculator</a>
-        <a href="for.html">For Loop</a>
-        <a href="while.html">While Loop</a>
-        <a href="dowhile.html">Do_While Loop</a>
-        <a href="forin.html">For_In Loop</a>
-    </nav>
+<link rel="stylesheet" href="main.css">
 
-    <div>
-         <h2>Guess the Number (Hint: number is Under 1 to 10 )</h2>
-
-        <input type="number" id="guess" placeholder="Enter your guess">
-        <button onclick="checkGuess()">Submit</button>
-
-        <p id="result"></p>
-    </div>
-
-   <script>
-    function checkGuess() {
-  let correctNumber = 7;
-  let userGuess;
-  let message = "";
-
-  do {
-    userGuess = Number(document.getElementById("guess").value);
-
-    if (userGuess !== correctNumber) {
-      message = "Wrong guess. Try again.";
-      break;  
-    } else {
-      message = "Correct guess.";
-    }
-
-  } while (userGuess !== correctNumber);
-
-  document.getElementById("result").innerText = message;
+<style>
+body{
+    font-family: Arial;
+    text-align: center;
 }
+
+input,button{
+    padding:8px;
+    margin:5px;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<a href="positive.html">Positive No.</a>
+<a href="Voting.html">Voting</a>
+<a href="percentage.html">Percentage</a>
+<a href="calculator.html">Calculator</a>
+<a href="for.html">For Loop</a>
+<a href="while.html">While Loop</a>
+<a href="dowhile.html">Do While Loop</a>
+<a href="forin.html">For In Loop</a>
+</nav>
+
+<div>
+
+<h2>Guess the Number (1 to 10)</h2>
+
+<input type="number" id="guess" placeholder="Enter your guess">
+
+<button onclick="checkGuess()">Submit</button>
+
+<p id="result"></p>
+
+</div>
+
+<script>
+
+let correctNumber = Math.floor(Math.random() * 10) + 1;
+
+function checkGuess(){
+
+let userGuess = Number(document.getElementById("guess").value);
+let message = "";
+
+do{
+
+if(userGuess === correctNumber){
+message = "Correct Guess!";
+break;
+}
+else if(userGuess > correctNumber){
+message = "Too High. Try again.";
+break;
+}
+else{
+message = "Too Low. Try again.";
+break;
+}
+
+}while(userGuess !== correctNumber);
+
+document.getElementById("result").innerText = message;
+
+}
+
 </script>
 
 </body>
