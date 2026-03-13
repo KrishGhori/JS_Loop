@@ -40,7 +40,27 @@
         <p id="result"></p>
     </div>
 
-   
+   <script>
+    function checkGuess() {
+  let correctNumber = 7;
+  let userGuess;
+  let message = "";
+
+  do {
+    userGuess = Number(document.getElementById("guess").value);
+
+    if (userGuess !== correctNumber) {
+      message = "Wrong guess. Try again.";
+      break;  
+    } else {
+      message = "Correct guess.";
+    }
+
+  } while (userGuess !== correctNumber);
+
+  document.getElementById("result").innerText = message;
+}
+</script>
 
 </body>
 </html>
