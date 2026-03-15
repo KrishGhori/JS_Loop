@@ -1,65 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ForIn</title>
-    <link rel="stylesheet" href="main.css">
-    <style>
-    body {
-      font-family: Arial;
-      text-align: center;
-    }
-    .pre{
-        height: 50px;
-        font-size: xx-large;
-        margin-top: 80px;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For In Loop</title>
 
-  </style>
+<link rel="stylesheet" href="main.css">
+
+<style>
+body{
+    font-family: Arial;
+    text-align: center;
+}
+
+input,button{
+    padding:8px;
+    margin:5px;
+}
+
+pre{
+    font-size:18px;
+    margin-top:20px;
+}
+</style>
+
 </head>
-<body>
-    
-    <nav>
-        <a href="positive.html">Positive No.</a>
-        <a href="Voting.html">Voting</a>
-        <a href="percentage.html">Percentage</a>
-        <a href="calculator.html">Calculator</a>
-        <a href="for.html">For Loop</a>
-        <a href="while.html">While Loop</a>
-        <a href="dowhile.html">Do_While Loop</a>
-        <a href="forin.html">For_In Loop</a>
-    </nav>
 
-    <div>
-         <h2>Print Table</h2>
+<body>
+
+<nav>
+<a href="positive.html">Positive No.</a>
+<a href="Voting.html">Voting</a>
+<a href="percentage.html">Percentage</a>
+<a href="calculator.html">Calculator</a>
+<a href="for.html">For Loop</a>
+<a href="while.html">While Loop</a>
+<a href="dowhile.html">Do While Loop</a>
+<a href="forin.html">For In Loop</a>
+</nav>
+
+<div>
+
+<h2>Print Table Using For...In Loop</h2>
 
 <input type="number" id="number" placeholder="Enter a number">
+
 <br><br>
+
 <button onclick="printTable()">Print Table</button>
 
 <pre id="result"></pre>
 
-    </div>
+</div>
 
-    <script>
-function printTable() {
-  let num = Number(document.getElementById("number").value);
-  let output = "";
+<script>
 
-  // Create object with multipliers
-  let multipliers = {
-    1: 1, 2: 2, 3: 3, 4: 4, 5: 5,
-    6: 6, 7: 7, 8: 8, 9: 9, 10: 10
-  };
+function printTable(){
 
-  for (let key in multipliers) {
-    output += num + " x " + multipliers[key] + " = " 
-           + (num * multipliers[key]) + "\n";
-  }
+let num = Number(document.getElementById("number").value);
+let output = "";
 
-  document.getElementById("result").innerText = output;
+// object for for-in loop
+let multipliers = {
+1:1,2:2,3:3,4:4,5:5,
+6:6,7:7,8:8,9:9,10:10
+};
+
+for(let key in multipliers){
+
+output += num + " x " + multipliers[key] + " = " + (num * multipliers[key]) + "\n";
+
 }
+
+document.getElementById("result").textContent = output;
+
+}
+
 </script>
 
 </body>
